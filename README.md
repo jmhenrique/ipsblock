@@ -10,6 +10,7 @@ Enjoy.
 Use /etc/allowcidr.txt to whitelist a ip/group ip
 
 ==================================
+
 firewall.@ipset[0]=ipset
 firewall.@ipset[0].name='allowcidr'
 firewall.@ipset[0].match='dst_net'
@@ -43,5 +44,6 @@ firewall.@rule[11].dest='*'
 firewall.@rule[11].family='ipv4'
 firewall.@rule[11].extra='-j REJECT --reject-with icmp-net-unreachable'
 firewall.@rule[11].proto='all'
+
 ==================================
 
